@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        KUBECONFIG = credentials('kubeconfig-eks')
         DOCKER_CREDENTIALS = credentials('DOCKERHUB') // Your Docker Hub credentials
     }
 
